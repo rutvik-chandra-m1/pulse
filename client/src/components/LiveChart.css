@@ -1,0 +1,23 @@
+.live-chart {
+  width: 100%;
+}
+
+.live-chart__tooltip {
+  background: var(--panel-raised);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.live-chart__tooltip-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.live-chart__tooltip-value {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+}

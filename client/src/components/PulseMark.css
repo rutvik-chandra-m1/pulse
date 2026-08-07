@@ -1,0 +1,33 @@
+.pulse-mark {
+  color: var(--accent);
+  overflow: visible;
+}
+
+.pulse-mark__path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+}
+
+.pulse-mark--live .pulse-mark__path {
+  animation: pulse-draw 2.4s linear infinite;
+}
+
+@keyframes pulse-draw {
+  0% {
+    stroke-dashoffset: 100;
+    filter: drop-shadow(0 0 0 var(--accent-glow));
+  }
+  45% {
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+  }
+  100% {
+    stroke-dashoffset: -100;
+    filter: drop-shadow(0 0 0 var(--accent-glow));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-mark--live .pulse-mark__path {
+    animation: none;
+  }
+}
